@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio of some of my projects built using Express and Node",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jasmine"
+  },
+  "author": "Kent Saeteurn",
+  "license": "ISC"
+}
