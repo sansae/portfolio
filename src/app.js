@@ -6,7 +6,7 @@ const routeConfig = require("./config/route-config.js");
 const appConfig = require("./config/main-config.js");
 
 routeConfig.init(app);
-appConfig.init();
+appConfig.init(app, express);
 
 // export our app so we can pass it to our node server
 // in server.js
