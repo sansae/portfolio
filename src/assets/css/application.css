@@ -2,6 +2,28 @@ body {
   background: grey;
 }
 
+nav {
+  display: flex;
+}
+
+#brand {
+  flex-grow: 8;
+}
+
+#brand a {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.links {
+  justify-content: flex-end;
+}
+
+.links .navbar-nav .nav-item .nav-link {
+  color: white;
+  font-size:5px;
+}
+
 #about, #contact {
   border-left: 4px solid lightgrey;
   border-right: 4px solid lightgrey;
