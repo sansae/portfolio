@@ -1,90 +1,174 @@
-.zero-margin-bottom {
-  margin-bottom: 0px;
-}
-.navbar-custom {
-  background-color: brown;
-}
-.navbar-header a {
-  color: white;
-}
-.nav.navbar-nav.navbar-right li a {
-  color: white;
+body {
+  background: grey;
 }
 
-.about {
+#about, #contact {
+  border-left: 4px solid lightgrey;
+  border-right: 4px solid lightgrey;
+}
+
+.navbar-custom {
+  background: brown;
+}
+
+#about {
   background-color: grey;
-  padding-top: 130px;
-  padding-right: 80px;
-  padding-bottom: 70px;
-  padding-left: 80px;
+  padding: 40px 40px 70px 40px;
   font-size: 18px;
   color: black;
+  display: flex;
 }
 
-.vcenter {
-  margin-right: -4px;
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
+#summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 3;
 }
+
+#summary p:first-child {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#img-div {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border-radius: 50%;
+  background: lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 900px;
+}
+
+.about-img {
+  width: 60%;
+}
+
 hr {
-  width: 100%;
+  width: 80%;
   height: 2.5px;
   background: #fff;
   border-color: black;
   background-color: black;
 }
 
-.about-img {
-  width: 60%;
-}
-.portfolio-img {
-  width: 350px;
-  height: 300px;
-}
-.circle-div {
-  border-radius: 50%;
-}
-
-.portfolio {
+#portfolio {
+  display: flex;
+  flex-direction: column;
   background-color: lightgrey;
   padding-top: 50px;
   padding-bottom: 90px;
+
 }
 
-.contact {
+#portfolio-title, #contact-title {
+  text-align:center
+}
+
+#portfolio-links .row {
+  margin: 15px 0px;
+  justify-content: space-around;
+}
+
+.portfolio-img {
+  width: 330px;
+  height: 300px;
+}
+
+
+#contact {
   background-color:grey;
   color: black;
   padding-top: 60px;
   padding-bottom: 70px;
 }
 
-form {
+#contact-main {
+  display: flex;
+}
+
+#contact-form {
+  flex-grow: 2;
   margin-left: 60px;
-}
-
-.right-column {
-  margin-top: 100px;
-  padding-right: 60px;
-  padding-left: 60px;
-  font-size: 18px;
-}
-
-.learn-more {
-  background-color: lightgrey;
-  width: 100%;
-}
-
-.links {
-  margin: 0 auto;
+  margin-right: 40px;
   padding-top: 40px;
-  padding-bottom: 40px;
+  width: 200px;
+}
+
+#contact-paragraph {
+  margin-right: 30px;
+  padding-top: 40px;
+  font-size: 18px;
+  width: 200px;
+  flex-grow: 2;
+}
+
+#contact-paragraph div {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#learn-more {
+  background-color: lightgrey;
+  display: flex;
+  height: 140px;
+}
+
+#learn-more div:first-child {
+  font-size: 5px;
+  flex-grow: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#learn-more div:first-child p {
+  margin-top: 15px;
+}
+
+#learn-more div:nth-child(2) {
+  width: 300px;
+  flex-direction: column;
+  flex-grow: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#learn-more div:nth-child(2) h7 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+#learn-more div:nth-child(2) p:nth-child(2) {
+  font-size: 5px;
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .site-footer {
-  width: 100%;
-  background-color: brown;
+  font-size: 5px;
+  background: brown;
   color: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-footer p {
+  margin-top: 20px;
+}
+
+.site-footer, #learn-more {
+  width: 100%;
 }

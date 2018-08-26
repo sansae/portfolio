@@ -5,107 +5,42 @@
   </head>
 
   <body>
+    <% include ./partials/navbar.ejs %>
+
     <main class="container">
-      <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom navbar-collapse" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#about">KS</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#about">About</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#learn-more">Learn More</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
       <div id="about">
-        <div class="container about">
-          <div class="row">
-            <div class="col-xs-8 vcenter">
-              <p style="line-height: 170%">Hi World. My name is Kent and I am an aspiring web developer. I found CodePen through FreeCodeCamp and so far I'm really enjoying it. I'm having a blast learning how to create websites. When I'm not coding, you'll likely find me doing other really fun stuff like lifting weights, hiking, or playing the guitar.</p>
-              <div class="row">
-                <div class="col-xs-2 vcenter" style="text-align: right">
-                  <span style="font-size: 30px">
-                    /*
-                  </span>
-                </div>
-                <div class="col-xs-8 vcenter">
-                  <hr>
-                </div>
-                <div class="col-xs-2 vcenter">
-                  <span style="font-size: 30px">
-                    */
-                  </span>
-                </div>
-              </div>
+        <div id="summary">
+          <p>Hi World. My name is Kent and I am an aspiring web developer. I found CodePen through FreeCodeCamp and so far I'm really enjoying it. I'm having a blast learning how to create websites. When I'm not coding, you'll likely find me doing other really fun stuff like lifting weights, hiking, or playing the guitar.</p>
 
-              <p style="font-size: 25px; text-align: center">Computer Science Student, Aspiring Web Developer</p>
-            </div>
-            <div class="col-xs-4 vcenter circle-div" style="background-color: lightgrey">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Stick_Figure.svg/2000px-Stick_Figure.svg.png" class="img-responsive about-img center-block img-circle">
-            </div>
-          </div>
+          <hr>
+
+          <p style="font-size: 25px; text-align: center">Computer Science Student, Aspiring Web Developer</p>
+        </div>
+        <div id="img-div">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Stick_Figure.svg/2000px-Stick_Figure.svg.png" class="about-img img-responsive center-block img-circle">
         </div>
       </div>
 
       <div id="portfolio">
-        <div class="container portfolio">
+        <div id="portfolio-title">
+          <h1>Portfolio</h1>
+        </div>
+
+        <div id="portfolio-links">
           <div class="row">
-            <div class="row">
-              <div class="col-xs-2">
-              </div>
-              <div class="col-xs-8">
-                <h1 style="text-align: center">Portfolio</h1>
-              </div>
-              <div class="col-xs-2">
-              </div>
-            </div>
-
-            <div class="row" style=" text-align: center">
-              <div class="col-xs-2 vcenter">
-                <hr>
-              </div>
-              <div class="col-xs-1 vcenter" style="text-align: center">
-                <span style="font-size: 30px">/*</span>
-              </div>
-              <div class="col-xs-2 vcenter">
-                <hr>
-              </div>
-              <div class="col-xs-1 vcenter">
-                <span style="font-size: 30px">*/</span>
-              </div>
-              <div class="col-xs-2 vcenter">
-                <hr>
-              </div>
-            </div>
-          </div>
-
-          <div class="row" style="margin-top: 50px">
-            <div class="col-xs-6">
+            <div>
               <img src="https://www.cjb-i.co.uk/wp-content/uploads/simulation.jpg" class="img-responsive center-block portfolio-img">
             </div>
-            <div class="col-xs-6">
+            <div>
               <img src="https://www.cjb-i.co.uk/wp-content/uploads/simulation.jpg" class="img-responsive center-block portfolio-img">
             </div>
           </div>
 
-          <div class="row" style="margin-top:50px">
-            <div class="col-xs-6">
+          <div class="row">
+            <div>
               <img src="https://www.cjb-i.co.uk/wp-content/uploads/simulation.jpg" class="img-responsive center-block portfolio-img">
             </div>
-            <div class="col-xs-6">
+            <div>
               <img src="https://www.cjb-i.co.uk/wp-content/uploads/simulation.jpg" class="img-responsive center-block portfolio-img">
             </div>
           </div>
@@ -113,84 +48,56 @@
       </div>
 
       <div id="contact">
-        <div class="container contact">
-          <div class="row">
-            <div class="col-xs-2">
-            </div>
-            <div class="col-xs-8">
-              <h1 style="text-align: center">Contact</h1>
-            </div>
-            <div class="col-xs-2">
-            </div>
+        <div id="contact-title">
+          <h1>Contact</h1>
+        </div>
+
+        <div id="contact-main">
+          <div id="contact-form">
+            <form>
+              <div class="form-group">
+                <label for="name" hidden>Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="email-address" hidden>Email Address</label>
+                <input type="email" class="form-control" id="email-address" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="phone" hidden>Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+              </div>
+              <div class="form-group">
+                <label for="msg" hidden>Message</label>
+                <textarea class="form-control" id="msg" rows="10" placeholder="Your Message Here"></textarea>
+              </div>
+              <input type="button" value="Submit">
+            </form>
           </div>
 
-          <div class="row" style=" text-align: center">
-            <div class="col-xs-2 vcenter">
-              <hr>
-            </div>
-            <div class="col-xs-1 vcenter" style="text-align: center">
-              <span style="font-size: 30px">/*</span>
-            </div>
-            <div class="col-xs-2 vcenter">
-              <hr>
-            </div>
-            <div class="col-xs-1 vcenter">
-              <span style="font-size: 30px">*/</span>
-            </div>
-            <div class="col-xs-2 vcenter">
-              <hr>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-6">
-              <form>
-                <div class="form-group" style="margin-top:30px">
-                  <label for="name" hidden>Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Name">
-                </div>
-                <div class="form-group">
-                  <label for="email-address" hidden>Email Address</label>
-                  <input type="email" class="form-control" id="email-address" placeholder="Email">
-                </div>
-                <div class="form-group">
-                  <label for="phone" hidden>Phone Number</label>
-                  <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
-                </div>
-                <div class="form-group">
-                  <label for="msg" hidden>Message</label>
-                  <textarea class="form-control" id="msg" rows="10" placeholder="Your Message Here"></textarea>
-                </div>
-                <input type="button" value="Submit">
-              </form>
-            </div>
-
-            <div class="col-xs-6 right-column" style="line-height: 170%">
+          <div id="contact-paragraph">
+            <div>
               <p>Hi There. Thanks for visiting my website. Would you like to contact me? If you want to hire me for a job and/or internship because you like my portfolio, then first, thank you, and second, please fill out the form to the left and I'll respond as soon as I can.</p>
-              <br>
               <p>I hope you have a blessed day &#58;&#41;</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div id="learn-more">
-        <div class="container learn-more">
-          <div class="row links">
-            <div class="col-xs-6 vcenter text-center">
-              <h5>This page was created by <a href="https://codepen.io/" target="_blank">Kent</a></h5>
-            </div>
-            <div class="col-xs-6 vcenter text-center">
-              <h4>Want to learn more about me?</h4>
-              <h5>Check out my other social media pages by clicking on <a href="https://www.linkedin.com/" target="_blank"> linkedin</a> and <a href="https://github.com/" target="_blank">github</a>.</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container text-center site-footer">
-        <h5>ks &copy; 2016. All Rights Reserved</h5>
-      </div>
     </main>
+
+    <section id="learn-more">
+      <div>
+        <p>This page was created by <a href="https://codepen.io/" target="_blank">Kent</a></p>
+      </div>
+
+      <div>
+        <h7>Want to learn more about me?</h7>
+        <p>Check out my other social media pages by clicking on <a href="https://www.linkedin.com/" target="_blank"> linkedin</a> and <a href="https://github.com/" target="_blank">github</a>.</p>
+      </div>
+    </section>
+
+    <footer class="text-center site-footer">
+      <p>ks &copy; 2016. All Rights Reserved</p>
+    </footer>
   </body>
 </html>
