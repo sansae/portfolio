@@ -44,6 +44,7 @@ nav {
   font-size: 18px;
   color: black;
   display: flex;
+  text-align: center;
 }
 
 #summary {
@@ -199,4 +200,33 @@ hr {
 
 .site-footer, #learn-more {
   width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #summary > p:first-child {
+    order: 3;
+  }
+
+  #summary > hr {
+    order: 2;
+  }
+
+  #summary p:nth-child(n + 3) {
+    order: 1;
+  }
+
+  #summary {
+    order: 2;
+  }
+
+  #img-div {
+    width: 100%;
+    order: 1;
+    margin-bottom: -20px;
+  }
 }
