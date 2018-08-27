@@ -203,6 +203,29 @@ hr {
 }
 
 @media only screen and (max-width: 767px) {
+  #portfolio-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #portfolio-links > div:first-child {
+    margin-bottom: -15px;
+  }
+
+  #portfolio-links .row div {
+    margin-bottom: 35px;
+  }
+
+  #portfolio-links .row:nth-child(2) {
+    margin-bottom: -30px;
+  }
+
+  .portfolio-img {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
   #about {
     display: flex;
     flex-direction: column;
@@ -230,25 +253,22 @@ hr {
     order: 1;
     margin-bottom: -20px;
   }
-
-  #portfolio-links {
-    text-align: center;
-    margin-top: 20px;
+  
+  #contact-main {
+    display: flex;
+    flex-direction: column;
   }
 
-  #portfolio-links > div:first-child {
-    margin-bottom: -15px;
-  }
-
-  #portfolio-links .row div {
-    margin-bottom: 35px;
-  }
-
-  #portfolio-links .row:nth-child(2) {
-    margin-bottom: -30px;
-  }
-
-  .portfolio-img {
+  #contact-form {
     width: 80%;
+    order: 2;
+    margin: 0 auto;
+  }
+
+  #contact-paragraph {
+    width: 80%;
+    order: 1;
+    text-align: center;
+    margin: 0 auto;
   }
 }
