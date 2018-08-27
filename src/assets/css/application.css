@@ -253,7 +253,7 @@ hr {
     order: 1;
     margin-bottom: -20px;
   }
-  
+
   #contact-main {
     display: flex;
     flex-direction: column;
@@ -270,5 +270,25 @@ hr {
     order: 1;
     text-align: center;
     margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #learn-more {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #learn-more-author {
+    /*border: 2px solid red;*/
+    order: 2;
+    /*margin-top: 30px;*/
+  }
+
+  #learn-more-links {
+    /*border: 2px solid blue;*/
+    margin: 0 auto;
+    order: 1;
   }
 }
