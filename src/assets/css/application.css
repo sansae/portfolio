@@ -210,6 +210,7 @@ hr {
 
   #summary > p:first-child {
     order: 3;
+    margin-top: 20px;
   }
 
   #summary > hr {
@@ -228,5 +229,26 @@ hr {
     width: 100%;
     order: 1;
     margin-bottom: -20px;
+  }
+
+  #portfolio-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #portfolio-links > div:first-child {
+    margin-bottom: -15px;
+  }
+
+  #portfolio-links .row div {
+    margin-bottom: 35px;
+  }
+
+  #portfolio-links .row:nth-child(2) {
+    margin-bottom: -30px;
+  }
+
+  .portfolio-img {
+    width: 80%;
   }
 }
