@@ -163,7 +163,7 @@ hr {
   margin-top: 5px;
 }
 
-#learn-more div:nth-child(2) {
+#learn-more-links {
   width: 300px;
   flex-direction: column;
   flex-grow: 3;
@@ -271,13 +271,10 @@ hr {
   }
 
   #learn-more-author {
-    /*border: 2px solid red;*/
     order: 2;
-    /*margin-top: 30px;*/
   }
 
   #learn-more-links {
-    /*border: 2px solid blue;*/
     margin: 0 auto;
     order: 1;
   }
