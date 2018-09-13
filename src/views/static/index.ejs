@@ -8,102 +8,15 @@
     <% include ./partials/navbar.ejs %>
 
     <main class="container">
-      <div id="about">
-        <div class="col-xs-8" id="summary">
-          <p>Hi &#58;&#41; My name is Kent. Welcome to my site. If you would like to see some of my work, click on the pics below. I am currently building fullstack apps using the MERN stack. I love using JavaScript and React. When I'm not coding, you'll likely find me doing other really fun stuff like lifting weights, hiking, playing the piano, or spending time with friends and family.</p>
+      <% include ./partials/about.ejs %>
 
-          <hr>
+      <% include ./partials/portfolio.ejs %>
 
-          <p style="font-size: 25px; text-align: center">Web Developer</p>
-
-          <p>...looking for junior positions, internships, and anything related to Web Development</p>
-        </div>
-        <div class="col-xs-4" id="img-div">
-          <img src="/images/kesa.JPG" class="about-img img-responsive center-block img-circle">
-        </div>
-      </div>
-
-      <div id="portfolio">
-        <div id="portfolio-title">
-          <h1>Projects</h1>
-        </div>
-
-        <div id="portfolio-links">
-          <div class="row">
-            <div>
-              <a href="https://codepen.io/kesa/full/PExbGz/" target="_blank">
-                <img src="/images/calculator.png" class="img-responsive center-block portfolio-img">
-              </a>
-            </div>
-            <div>
-              <a href="http://bloc-jams-react-kesa.herokuapp.com/" target="_blank">
-                <img src="/images/blocJams.png" class="img-responsive center-block portfolio-img">
-              </a>
-            </div>
-          </div>
-
-          <div class="row">
-            <div>
-              <a href="https://codepen.io/kesa/full/NAJEYO/" target="_blank">
-                <img src="/images/wikiViewer.png" class="img-responsive center-block portfolio-img">
-              </a>
-            </div>
-            <div>
-              <a href="https://bloc-chat-react-kesa.herokuapp.com/" target="_blank">
-                <img src="/images/blocChat.png" class="img-responsive center-block portfolio-img">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="contact">
-        <div id="contact-title">
-          <h1>Contact Me</h1>
-        </div>
-
-        <div id="contact-main">
-          <div id="contact-form">
-            <form>
-              <div class="form-group">
-                <label for="name" hidden>Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Name">
-              </div>
-              <div class="form-group">
-                <label for="email-address" hidden>Email Address</label>
-                <input type="email" class="form-control" id="email-address" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <label for="phone" hidden>Phone Number</label>
-                <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
-              </div>
-              <div class="form-group">
-                <label for="msg" hidden>Message</label>
-                <textarea class="form-control" id="msg" rows="10" placeholder="Your Message Here"></textarea>
-              </div>
-              <input type="button" value="Submit">
-            </form>
-          </div>
-
-          <div id="contact-paragraph">
-            <div>
-              <p>Hi There. Thank you for visiting. Would you like to contact me? If you would like to speak with me because you like my portfolio, then feel free to fill out the form and I'll respond as soon as I can.</p>
-              <p>I hope you have a blessed day &#58;&#41;</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <% include ./partials/contact.ejs %>
     </main>
 
     <section id="learn-more">
-      <div id="learn-more-author">
-        <p>This page was created by Kent Saeteurn</p>
-      </div>
-
-      <div id="learn-more-links">
-        <h7>Want to learn more about me?</h7>
-        <p>Here are my other profiles: <a href="https://www.linkedin.com/in/kentsaeteurn/" target="_blank"> LinkedIn</a>, <a href="https://github.com/sansae" target="_blank">GitHub</a>, <a href="https://www.freecodecamp.org/sansae" target="_blank">freeCodeCamp</a>, <a href="https://codepen.io/kesa/" target="_blank">CodePen</a>, <a href="https://www.codewars.com/users/sansae/completed" target="_blank">codeWars</a>.</p>
-      </div>
+      <% include ./partials/learn-more.ejs %>
     </section>
 
     <footer class="text-center site-footer">
