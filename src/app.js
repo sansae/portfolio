@@ -2,11 +2,12 @@
 const express = require("express");
 const app = express();
 
-const routeConfig = require("./config/route-config.js");
 const appConfig = require("./config/main-config.js");
+const routeConfig = require("./config/route-config.js");
 
-routeConfig.init(app);
+// when using body-parser, we must make sure to define and initialize appConfig first before we define and initialize routeConfig
 appConfig.init(app, express);
+routeConfig.init(app);
 
 // export our app so we can pass it to our node server
 // in server.js

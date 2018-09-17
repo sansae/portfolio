@@ -5,24 +5,38 @@
 
   <div id="contact-main">
     <div id="contact-form">
-      <form>
+      <form method="POST" action="/sendEmail">
         <div class="form-group">
           <label for="name" hidden>Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Name">
+          <input type="text" class="form-control" id="name" placeholder="Name" name="name">
         </div>
+
         <div class="form-group">
-          <label for="email-address" hidden>Email Address</label>
-          <input type="email" class="form-control" id="email-address" placeholder="Email">
+          <label for="company" hidden>Company</label>
+          <input type="text" class="form-control" id="company" placeholder="Company" name="company">
         </div>
+
+        <div class="form-group">
+          <label for="email" hidden>Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+        </div>
+
         <div class="form-group">
           <label for="phone" hidden>Phone Number</label>
-          <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+          <input type="text" class="form-control" id="phone" placeholder="Phone Number" name="phone">
         </div>
+
+        <div>
+          <label for="subject" hidden>Subject</label>
+          <input type="text" class="form-control" id="subject" placeholder="subject" name="subject">
+        </div>
+
         <div class="form-group">
           <label for="msg" hidden>Message</label>
-          <textarea class="form-control" id="msg" rows="10" placeholder="Your Message Here"></textarea>
+          <textarea class="form-control" id="msg" rows="10" placeholder="Your Message Here" name="msg"></textarea>
         </div>
-        <input type="button" value="Submit">
+
+        <button type="submit">Submit</button>
       </form>
     </div>
 

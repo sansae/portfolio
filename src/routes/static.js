@@ -4,7 +4,8 @@ const router = express.Router();
 
 const staticController = require("../controllers/staticController");
 
-// we define our static routes here
 router.get("/", staticController.index);
+
+router.post("/sendEmail", staticController.sendEmail);
 
 module.exports = router;
