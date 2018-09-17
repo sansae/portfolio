@@ -1,20 +1,4 @@
-const nodemailer = require("nodemailer");
-const { google } = require("googleapis");
-const Oauth2 = google.auth.OAuth2;
-const oauth2Client = new Oauth2(
-  process.env.CLIENT_ID,
-  process.env.CLIENT_SECRET,
-  // redirect url
-  "https://developers.google.com/oauthplayground"
-);
-
-oauth2Client.setCredentials({
-  refresh_token: process.env.REFRESH_TOKEN
-});
-
-const accessToken = oauth2Client.refreshAccessToken().then((res) => {
-  res.credentials.access_token;
-});
+const sgMail = require('@sendgrid/mail');
 
 module.exports = {
   index(req, res, next) {
@@ -23,6 +7,8 @@ module.exports = {
   },
 
   sendEmail(req, res, next) {
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
     const output = `
       <p>You have a new message!</p>
       <h3>Contact Details</h3>
@@ -38,43 +24,21 @@ module.exports = {
       <p>${req.body.msg}</p>
     `;
 
-    // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-      service: "gmail",
-      host: 'smtp.gmail.com',
-      // port 465 is for smtps, or simple mail transfer protocol that is secure
-      port: 465,
-      // true for 465, false for other ports
-      secure: true,
-      auth: {
-        type: "OAuth2",
-        user: process.env.USER_EMAIL,
-        clientId: process.env.CLIENT_ID,
-        clientSecret: process.env.CLIENT_SECRET,
-        refreshToken: process.env.REFRESH_TOKEN,
-        accessToken: accessToken
-      }
-    });
-
-    // setup email data with unicode symbols
-    let mailOptions = {
+    const msg = {
       from: req.body.email,
       to: process.env.USER_EMAIL,
       subject: req.body.subject,
       html: output
     };
 
-    // send mail with defined transport object
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        return console.log(error);
+    sgMail.send(msg, (err, res) => {
+      if (err) {
+        console.log(err);
       } else {
-        console.log(info);
+        console.log("SendGrid Sent Your Message Successfully!");
       }
-
-      res.render("static/index");
-
-      transporter.close();
     });
-  },// end sendEmail
+
+    res.render("static/index");
+  },//end sendMail
 }
