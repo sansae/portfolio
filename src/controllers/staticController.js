@@ -39,6 +39,7 @@ module.exports = {
       }
     });
 
+    req.flash("notice", "Thanks! I'll reply soon!");
     res.render("static/index");
   },//end sendMail
 }

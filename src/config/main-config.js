@@ -5,6 +5,8 @@ require("dotenv").config();
 // we need to include the path so that our app knows where to find the views
 const path = require("path");
 const viewsFolder = path.join(__dirname, "..", "views");
+const session = require("express-session");
+const flash = require("express-flash");
 const express = require("express");
 const bodyParser = require("body-parser");
 
@@ -16,6 +18,14 @@ module.exports = {
     app.set("view engine", "ejs");
     // tell express where to find the static assets
     app.use(express.static(path.join(__dirname, "..", "assets")));
+
+    app.use(session({
+      secret: "passIsPass",
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 1.21e+9 }
+    }));
+    app.use(flash());
 
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(bodyParser.json());

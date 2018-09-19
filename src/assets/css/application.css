@@ -20,6 +20,27 @@ nav {
   margin-left: 10px;
 }
 
+#brand span {
+  font-weight: bold;
+  color: lightgreen;
+  font-size: 10px;
+
+  -webkit-animation: fadeOut 2s forwards;
+  animation: fadeOut 2s forwards;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+@-webkit-keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
 .links {
   justify-content: flex-end;
 }
