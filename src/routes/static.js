@@ -4,8 +4,10 @@ const router = express.Router();
 
 const staticController = require("../controllers/staticController");
 
+const validation = require("./validation");
+
 router.get("/", staticController.index);
 
-router.post("/sendEmail", staticController.sendEmail);
+router.post("/sendEmail", validation.validateUserInfo, staticController.sendEmail);
 
 module.exports = router;

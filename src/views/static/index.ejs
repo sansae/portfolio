@@ -4,7 +4,8 @@
     <% include ./partials/head.ejs %>
   </head>
 
-  <body>
+  <body onload="<%= messages.error ? 'scrollToMessages()' : '' %>">
+
     <% include ./partials/navbar.ejs %>
 
     <main class="container">
