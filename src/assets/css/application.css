@@ -167,6 +167,17 @@ hr {
   justify-content: center;
 }
 
+#sendgrid-msg {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+#sendgrid-msg > a, #learn-more-links > p > a {
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 #learn-more {
   background-color: lightgrey;
   display: flex;
