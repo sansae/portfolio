@@ -21,7 +21,7 @@ module.exports = {
       <h3>Subject</h3>
       <p>${req.body.subject}</p>
       <h3>Message</h3>
-      <p>${req.body.msg}</p>
+      <p>${req.body.message}</p>
     `;
 
     const msg = {
@@ -40,6 +40,6 @@ module.exports = {
     });
 
     req.flash("notice", "Thanks! I'll reply soon!");
-    res.render("static/index");
+    res.redirect("/");
   },//end sendMail
 }

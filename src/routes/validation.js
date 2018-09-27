@@ -1,9 +1,9 @@
 module.exports = {
   validateUserInfo(req, res, next) {
     if (req.method === "POST") {
-      console.log(req.body.name);
       req.checkBody("name", "cannot be empty").notEmpty();
       req.checkBody("email", "must be valid").isEmail();
+      req.checkBody("subject", "cannot be empty").notEmpty();
       req.checkBody("message", "cannot be empty").notEmpty();
     }
 
