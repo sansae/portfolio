@@ -29,3 +29,8 @@ function normalizePort(val) {
 server.on("listening", () => {
   console.log(`server is listening for requests on port ${server.address().port}`);
 });
+
+// prevent app from sleeping in production
+setInterval(() => {
+  http.get("http://sansaeportfolio.herokuapp.com");
+}, 300000); // pings app every 5 minutes (300000)
