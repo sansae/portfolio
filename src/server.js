@@ -31,6 +31,6 @@ server.on("listening", () => {
 });
 
 // prevent app from sleeping in production
-setInterval(() => {
-  http.get("http://sansaeportfolio.herokuapp.com");
-}, 300000); // pings app every 5 minutes (300000)
+// setInterval(() => {
+//   http.get("http://sansaeportfolio.herokuapp.com");
+// }, 300000); // pings app every 5 minutes (300000)
